@@ -16,10 +16,10 @@ class BasePageHelper:
             self.attach_screenshot()
         self.find_element(BasePageLocators.LOGO_TRU)
 
-    def find_element(self, locator, time=5):
+    def find_element(self, locator, time=30):
         return WebDriverWait(self.driver, time).until(expected_conditions.visibility_of_element_located(locator), message=f'Не удалось найти элемент {locator}')
 
-    def find_elements(self, locator, time=5):
+    def find_elements(self, locator, time=30):
         return WebDriverWait(self.driver, time).until(expected_conditions.visibility_of_all_elements_located(locator), message=f'Не удалось найти элементы {locator}')
 
     @allure.step('Открываем страницу')

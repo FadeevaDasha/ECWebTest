@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import allure
 
 class AccountPageLocators:
-    ECOMMERCE_LINKS = (By.XPATH, '//body//app-root//a[12]')
+    ECOMMERCE_LINKS = (By.XPATH, '(//*[@data-product-name="E-commerce"])[2]')
 
 class AccountPageHelper(BasePageHelper):
     def __init__(self, driver):
